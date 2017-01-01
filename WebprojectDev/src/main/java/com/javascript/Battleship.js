@@ -18,7 +18,16 @@ var view = {
 
 
 var ships = [
-        {location: [01, 11, 21], hits: ["", "", ""]},
-        {location: [01, 11, 21], hits: ["", "", ""]},
-        {location: [01, 11, 21], hits: ["", "", ""]}
+        {location: [01, 11, 21], hits: ["hit", "", ""]},
+        {location: [03, 13, 23], hits: ["", "", ""]},
+        {location: [04, 14, 24], hits: ["", "", ""]}
         ]
+
+function  checkOption(location) {
+    var ArrayChar = ["A", "B", "C", "D", "E", "F", "G"];
+    for (var i = 0; i < ArrayChar.length; i ++) {
+        if (location.substr(0,1) === ArrayChar[i]){
+            return ArrayChar[i].concat(location.substr(1,1))
+        }
+    }
+}
